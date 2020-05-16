@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/carbon_toolbarHeight"
+    android:orientation="horizontal">
+
+    <carbon.widget.ImageView
+        android:id="@+id/carbon_toolbarIcon"
+        style="@style/carbon_ImageView.IconButton"
+        android:layout_width="@dimen/carbon_toolbarItemSize"
+        android:layout_height="@dimen/carbon_toolbarHeight"
+        android:layout_marginStart="@dimen/carbon_toolbarItemMargin"
+        android:layout_marginLeft="@dimen/carbon_toolbarItemMargin"
+        android:layout_marginEnd="@dimen/carbon_toolbarUpTitleMargin"
+        android:layout_marginRight="@dimen/carbon_toolbarUpTitleMargin"
+        app:carbon_inAnimation="none"
+        app:carbon_outAnimation="none" />
+
+    <carbon.widget.FrameLayout
+        android:id="@+id/carbon_toolbarContent"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/carbon_windowPadding"
+        android:layout_marginLeft="@dimen/carbon_windowPadding"
+        android:layout_weight="1"
+        android:minHeight="@dimen/carbon_toolbarHeight">
+
+        <carbon.widget.TextView
+            android:id="@+id/carbon_toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/carbon_toolbarHeight"
+            android:layout_gravity="bottom"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text=""
+            android:textAppearance="?attr/carbon_textAppearanceTitle"
+            tools:text="Toolbar" />
+    </carbon.widget.FrameLayout>
+
+    <carbon.widget.ToolStrip
+        android:id="@+id/carbon_toolbarMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/carbon_toolbarHeight"
+        android:paddingStart="@dimen/carbon_toolbarItemPadding"
+        android:paddingLeft="@dimen/carbon_toolbarItemPadding"
+        android:paddingEnd="@dimen/carbon_toolbarItemMargin"
+        android:paddingRight="@dimen/carbon_toolbarItemMargin" />
+</carbon.widget.LinearLayout>

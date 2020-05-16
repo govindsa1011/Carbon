@@ -1,0 +1,60 @@
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    app:carbon_insetColor="?attr/colorPrimary"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/view_debugtoolbar" />
+
+    <carbon.widget.Label
+        style="@style/sectionDescription"
+        android:text="Path animation using NURBS. Click anywhere to move the card there." />
+
+    <carbon.widget.LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <carbon.widget.LinearLayout
+            android:id="@+id/card"
+            style="@style/carbon_CardView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical">
+
+            <carbon.widget.ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop" />
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/carbon_padding"
+                android:paddingTop="@dimen/carbon_paddingHalf"
+                android:paddingRight="@dimen/carbon_padding"
+                android:paddingBottom="@dimen/carbon_paddingHalf">
+
+                <carbon.widget.Label
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textAppearance="?attr/carbon_textAppearanceBody1" />
+
+                <carbon.widget.Label
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Subtitle"
+                    android:textAppearance="?attr/carbon_textAppearanceCaption" />
+            </carbon.widget.LinearLayout>
+        </carbon.widget.LinearLayout>
+    </carbon.widget.LinearLayout>
+</carbon.widget.LinearLayout>
